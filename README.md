@@ -91,7 +91,7 @@ Los resultados de los análisis se almacenan en **archivos JSON estructurados**,
 
 ## Levanta los servicios con Docker Compose:
 
-    docker-compose up --build
+    docker compose up -d
 
 ## Accede al frontend en:
 
