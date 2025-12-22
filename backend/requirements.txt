@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+python-multipart
+shodan
+requests
+react-json-view-lite
+nmap

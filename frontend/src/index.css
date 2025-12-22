@@ -1,0 +1,166 @@
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  background: #f4f6f9;
+  color: #1e293b;
+}
+
+
+
+.app-main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.panels-row {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.app-header {
+  background: linear-gradient(135deg, #d2b48c, #F0DFC9);
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 3px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.app-main {
+  display: flex;
+  gap: 16px; 
+  height: calc(100vh - 80px);
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.left-panel,
+.right-panel {
+  width: 50%; 
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+  max-height: 600px; 
+}
+
+.results-panel {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+
+
+.loading, .no-data {
+  text-align: center;
+  margin-top: 2rem;
+  color: #475569;
+}
+
+.last-run pre {
+  background: #f1f5f9;
+  padding: 0.75rem;
+  border-radius: 8px;
+  overflow: auto;
+  max-height: 200px;
+  font-size: 13px;
+}
+
+button {
+  background: #d2b48c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #F0DFC9,#c19a6b);
+  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.4);
+}
+
+button:disabled {
+  background: #cbd5e1;
+  color: #64748b;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+
+input,
+select {
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 0.5rem;
+  width: 100%;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  transition: box-shadow 0.2s;
+  box-sizing: border-box; 
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #93c5fd;
+}
+
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 14px;
+}
+
+th {
+  background-color: #e2e8f0;
+  color: #1e293b;
+  font-weight: 600;
+  text-align: left;
+  padding: 8px;
+}
+
+td {
+  border-top: 1px solid #e2e8f0;
+  padding: 8px;
+  color: #334155;
+}
+
+tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.app-header h1 {
+  margin: 0;
+  padding: 4px 0;
+  font-size: 1.5rem;
+}
+

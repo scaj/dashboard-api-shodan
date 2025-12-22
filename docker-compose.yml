@@ -1,0 +1,35 @@
+services:
+  backend:
+    build: ./backend
+    environment:
+      - SHODAN_API_KEY=
+    ports:
+      - '8000:8000'
+    volumes:
+      - ./backend:/app
+      - ./backend/results:/app/results
+      - ./backend/scripts:/app/scripts
+    cap_add:
+      - NET_RAW
+      - NET_ADMIN
+    security_opt:
+      - apparmor:unconfined
+    privileged: true
+    networks:
+      - app-net
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_BASE=http://localhost:8000
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - app-net
+      
+networks:
+  app-net:
+    driver: bridge
