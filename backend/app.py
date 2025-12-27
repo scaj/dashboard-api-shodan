@@ -114,7 +114,7 @@ async def _run_script_and_capture(cmd: str, timeout: int = 120, env: Dict[str, s
 def get_available_scripts() -> Dict[str, pathlib.Path]:
     """
     devuelve un dict {script_name: script_path} con todos los scripts .py
-    en la carpeta SCRIPTS_DIR.
+    en la carpeta scripts.
     """
     scripts = {}
     for f in SCRIPTS_DIR.glob("*.py"):
@@ -130,7 +130,7 @@ AVAILABLE_SCRIPTS = get_available_scripts()
 async def run_script(script_name: str, req: RunRequest, background_tasks: BackgroundTasks):
     """
     ejecuta el script Python de la carpeta SCRIPTS_DIR tomando parámetros
-    desde el frontend. Devuelve resultado JSON.
+    desde el frontend. Devuelve resultado en JSON.
     """
     try:
         print(f"[DEBUG] Received params: {req.params}")
