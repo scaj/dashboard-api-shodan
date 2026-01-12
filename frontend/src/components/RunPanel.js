@@ -128,7 +128,7 @@ export default function RunPanel({ onStarted, apiKey, setApiKey }) {
       <h4>Ejecución de scripts</h4>
 
       <div style={{ marginBottom: 8 }}>
-        <label style={{ fontSize: 12 }}>SHODAN API key (optional):</label>
+        <label style={{ fontSize: 12 }}>SHODAN API key:</label>
         <input
           type="password"
           placeholder="sk-your-key..."
